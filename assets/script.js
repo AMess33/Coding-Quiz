@@ -1,4 +1,4 @@
-// create a start button to start the game
+// add event listener for start button to start the game
 // when start button is hit the first question and a timer appear
 // the timer starts counting down upon start
 // the question is followed by 4 selectable answers
@@ -12,3 +12,38 @@
 // create a leaderboard with previous high scores
 // display leaderboard at end of game
 // allow player to play again
+
+var question = {
+    one: 'What is an Object?',
+    two: 'What is an Array?',
+    three: 'What is a String?',
+    four: 'What is the DOM?',
+}
+
+var answerOne = {
+    one: '',
+    two: '',
+    three: '',
+    four: 'Document Object Model',
+}
+
+var answerTwo = {
+    one: '',
+    two: '',
+    three: '',
+    four: '',
+}
+
+var answerThree = {
+    one: '',
+    two: '',
+    three: '',
+    four: '',
+}
+
+var answerFour = {
+    one: '',
+    two: '',
+    three: '',
+    four: '',
+}
