@@ -13,40 +13,40 @@
 // display leaderboard at end of game
 // allow player to play again
 
-var question = {
+var questionEl = {
     one: 'What term refers to a true or false value?',
     two: 'What can be stored in Arrays?',
     three: 'What is the right answer?',
     four: 'What is the DOM?',
-}
+};
 
 var firstAnswer = {
     one: 'Array',
     two: 'Strings and Numbers',
     three: 'This one!',
     four: 'Document Object Model',
-}
+};
 
 var secondAnswer = {
     one: 'String',
     two: 'other arrays',
     three: 'Nope',
     four: 'I dont know, you tell me.',
-}
+};
 
 var thirdAnswer = {
     one: 'Boolean',
     two: 'booleans',
     three: 'Not this one.',
     four: "Dominic Toretto's nickname",
-}
+};
 
 var fourthAnswer = {
     one: 'Function',
     two: 'All of the Above',
     three: 'Look again',
     four: 'A spicy sauce from the Dominican Republic',
-}
+};
 
 var timer = document.getElementById("timer");
 
@@ -66,51 +66,53 @@ function countDown () {
 }
 
 var startGame = document.getElementById("startGame");
+var question = document.getElementById("question");
+var answerOne = document.getElementById("answerOne");
+var answerTwo = document.getElementById("answerTwo");
+var answerThree = document.getElementById("answerThree");
+var answerFour = document.getElementById("answerFour");
+
 
 function gameOver () {
     timer.textContent = "Game Over!";
 }
-// are not working properly
-// function firstQuestion() {
-//     question.textContent = question, one;
-//     answerOne.textContent = firstAnswer, one;
-//     answerTwo.textContent = (secondAnswer ['one']);
-//     answerThree.textContent = (thirdAnswer ['one']);
-//     answerFour.textContent = (firstAnswer ['one']);
+function firstQuestion() {
+    question.textContent = questionEl['one'];
+    answerOne.textContent = firstAnswer['one'];
+    answerTwo.textContent = secondAnswer['one'];
+    answerThree.textContent = thirdAnswer['one'];
+    answerFour.textContent = fourthAnswer['one'];
 
-// }
+};
 
-// function secondQuestion() {
-//     question.textContent = question[1];
-//     answerOne.textContent = answerOne[1];
-//     answerTwo.textContent = answerTwo[1];
-//     answerThree.textContent = answerThree[1];
-//     answerFour.textContent = answerFour[1];
+function secondQuestion() {
+    question.textContent = questionEl['two'];
+    answerOne.textContent = firstAnswer['two'];
+    answerTwo.textContent = secondAnswer['two'];
+    answerThree.textContent = thirdAnswer['two'];
+    answerFour.textContent = fourthAnswer['two'];
+};
 
-// }
+function thirdQuestion() {
+    question.textContent = questionEl['three'];
+    answerOne.textContent = firstAnswer['three'];
+    answerTwo.textContent = secondAnswer['three'];
+    answerThree.textContent = thirdAnswer['three'];
+    answerFour.textContent = fourthAnswer['three'];
 
-// function thirdQuestion() {
-//     question.textContent = question[2];
-//     answerOne.textContent = answerOne[2];
-//     answerTwo.textContent = answerTwo[2];
-//     answerThree.textContent = answerThree[2];
-//     answerFour.textContent = answerFour[2];
+};
 
-// }
+function fourthQuestion() {
+    question.textContent = questionEl['four'];
+    answerOne.textContent = firstAnswer['four'];
+    answerTwo.textContent = secondAnswer['four'];
+    answerThree.textContent = thirdAnswer['four'];
+    answerFour.textContent = fourthAnswer['four'];
 
-// function fourthQuestion() {
-//     question.textContent = question[3];
-//     answerOne.textContent = answerOne[3];
-//     answerTwo.textContent = answerTwo[3];
-//     answerThree.textContent = answerThree[3];
-//     answerFour.textContent = answerFour[3];
-
-// }
+};
 
 startGame.addEventListener('click', Event => {
     countDown();
-    // firstQuestion();
-    // secondQuestion();
-    // thirdQuestion();
-    // fourthQuestion();
+    firstQuestion();
+
 });
