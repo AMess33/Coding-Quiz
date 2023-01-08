@@ -1,6 +1,6 @@
-// add event listener for start button to start the game
+// add event listener for start button to start the game X
 // when start button is hit the first question and a timer appear
-// the timer starts counting down upon start
+// the timer starts counting down upon start X
 // the question is followed by 4 selectable answers
 // when the player selects a correct answer they are given points
 // when the player selects a wrong answer the timer loses 10 seconds
@@ -14,37 +14,37 @@
 // allow player to play again
 
 var question = {
-    one: 'What is an Object?',
-    two: 'What is an Array?',
-    three: 'What is a String?',
+    one: 'What term refers to a true or false value?',
+    two: 'What can be stored in Arrays?',
+    three: 'What is the right answer?',
     four: 'What is the DOM?',
 }
 
-var answerOne = {
-    one: '',
-    two: '',
-    three: '',
+var firstAnswer = {
+    one: 'Array',
+    two: 'Strings and Numbers',
+    three: 'This one!',
     four: 'Document Object Model',
 }
 
-var answerTwo = {
-    one: '',
-    two: '',
-    three: '',
+var secondAnswer = {
+    one: 'String',
+    two: 'other arrays',
+    three: 'Nope',
     four: 'I dont know, you tell me.',
 }
 
-var answerThree = {
-    one: '',
-    two: '',
-    three: '',
+var thirdAnswer = {
+    one: 'Boolean',
+    two: 'booleans',
+    three: 'Not this one.',
     four: "Dominic Toretto's nickname",
 }
 
-var answerFour = {
-    one: '',
-    two: '',
-    three: '',
+var fourthAnswer = {
+    one: 'Function',
+    two: 'All of the Above',
+    three: 'Look again',
     four: 'A spicy sauce from the Dominican Republic',
 }
 
@@ -67,10 +67,50 @@ function countDown () {
 
 var startGame = document.getElementById("startGame");
 
-startGame.addEventListener('click', Event => {
-    countDown();
-});
-
 function gameOver () {
     timer.textContent = "Game Over!";
 }
+// are not working properly
+// function firstQuestion() {
+//     question.textContent = question, one;
+//     answerOne.textContent = firstAnswer, one;
+//     answerTwo.textContent = (secondAnswer ['one']);
+//     answerThree.textContent = (thirdAnswer ['one']);
+//     answerFour.textContent = (firstAnswer ['one']);
+
+// }
+
+// function secondQuestion() {
+//     question.textContent = question[1];
+//     answerOne.textContent = answerOne[1];
+//     answerTwo.textContent = answerTwo[1];
+//     answerThree.textContent = answerThree[1];
+//     answerFour.textContent = answerFour[1];
+
+// }
+
+// function thirdQuestion() {
+//     question.textContent = question[2];
+//     answerOne.textContent = answerOne[2];
+//     answerTwo.textContent = answerTwo[2];
+//     answerThree.textContent = answerThree[2];
+//     answerFour.textContent = answerFour[2];
+
+// }
+
+// function fourthQuestion() {
+//     question.textContent = question[3];
+//     answerOne.textContent = answerOne[3];
+//     answerTwo.textContent = answerTwo[3];
+//     answerThree.textContent = answerThree[3];
+//     answerFour.textContent = answerFour[3];
+
+// }
+
+startGame.addEventListener('click', Event => {
+    countDown();
+    // firstQuestion();
+    // secondQuestion();
+    // thirdQuestion();
+    // fourthQuestion();
+});
