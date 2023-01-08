@@ -4,7 +4,7 @@
 // the question is followed by 4 selectable answers X
 // when the player selects a correct answer they are given points
 // when the player selects a wrong answer the timer loses 10 seconds
-// repeate the process for 4 seperate questions
+// repeate the process for 4 seperate questions X
 // add the points from each correct answer
 // present the score at the end of the quiz
 // if the timer runs out before all questions are answered the game ends
