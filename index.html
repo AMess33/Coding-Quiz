@@ -8,29 +8,34 @@
     </head>
     <body class="bg-primary">
         <div class="d-flex justify-content-center">
-            <h1 class="bg-success bg-gradient text-light m-3 p-3 border border-light rounded-pill">Coding Quiz</h1>
+            <h1 class="bg-success bg-gradient text-light m-3 p-3 border border-3 border-light rounded-pill">Coding Quiz</h1>
         </div>
         <section>
             <div class="d-flex justify-content-center">
-                <a id="question" class="bg-light">Question</a>
+                <p id="question" class="bg-light border border-3 m-3 p-3 fs-2 border-dark rounded-pill"></p>
             </div>
             <div class="d-flex justify-content-center">
-                <a><input id="answerOne" class="bg-light"></a>
+                <button type="button" id="answerOne" class="bg-light m-1 p-2 border-3 border-dark rounded-pill"></button>
             </div>
             <div class="d-flex justify-content-center">
-                <a><input id="answerTwo" class="bg-light"></a>
+                <button type="button" id="answerTwo" class="bg-light m-1 p-2 border-3 border-dark rounded-pill"></button>
             </div>
             <div class="d-flex justify-content-center">    
-                <a><input id="answerThree" class="bg-ligh"></a>
+                <button type="button" id="answerThree" class="bg-ligh m-1 p-2 border-3 border-dark rounded-pill"></button>
             </div>
             <div class="d-flex justify-content-center">
-                <a><input id="answerFour" class="bg-light"></a>
+                <button type="button" id="answerFour" class="bg-light m-1 p-2 border-3 border-dark rounded-pill"></button>
             </div>
         </section>
 
         <!-- start game button -->
         <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary btn-lg border border-light rounded-pill">START GAME</button>
+            <button type="button" id="startGame" class="btn btn-secondary btn-lg mt-3 border border-light rounded-pill">START GAME</button>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <h2 id="timer" class="bg-warning text-dark m-2 p-3 border border-5 border-white rounded-circle"></h2>
+
         </div>
             <script src="./assets/script.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>

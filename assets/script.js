@@ -31,19 +31,46 @@ var answerTwo = {
     one: '',
     two: '',
     three: '',
-    four: '',
+    four: 'I dont know, you tell me.',
 }
 
 var answerThree = {
     one: '',
     two: '',
     three: '',
-    four: '',
+    four: "Dominic Toretto's nickname",
 }
 
 var answerFour = {
     one: '',
     two: '',
     three: '',
-    four: '',
+    four: 'A spicy sauce from the Dominican Republic',
+}
+
+var timer = document.getElementById("timer");
+
+var secondsLeft = 60;
+
+function countDown () {
+    var timeInterval = setInterval(function () {
+        secondsLeft--;
+        timer.textContent = secondsLeft;
+
+        if(secondsLeft === 0) {
+            clearInterval(timeInterval);
+            gameOver();
+            secondsLeft = 60;
+        }
+    }, 1000);
+}
+
+var startGame = document.getElementById("startGame");
+
+startGame.addEventListener('click', Event => {
+    countDown();
+});
+
+function gameOver () {
+    timer.textContent = "Game Over!";
 }
