@@ -1,7 +1,7 @@
 // add event listener for start button to start the game X
-// when start button is hit the first question and a timer appear
+// when start button is hit the first question and a timer appear X
 // the timer starts counting down upon start X
-// the question is followed by 4 selectable answers
+// the question is followed by 4 selectable answers X
 // when the player selects a correct answer they are given points
 // when the player selects a wrong answer the timer loses 10 seconds
 // repeate the process for 4 seperate questions
@@ -83,6 +83,29 @@ function firstQuestion() {
     answerThree.textContent = thirdAnswer['one'];
     answerFour.textContent = fourthAnswer['one'];
 
+    answerOne.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        secondQuestion();
+    })
+
+    answerTwo.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        secondQuestion();    
+    })
+
+    answerThree.addEventListener('click', Event => {
+        startGame.textContent = 'Correct!'
+        // points added here
+        secondQuestion();
+    })
+
+    answerFour.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        secondQuestion();
+    })    
 };
 
 function secondQuestion() {
@@ -91,6 +114,29 @@ function secondQuestion() {
     answerTwo.textContent = secondAnswer['two'];
     answerThree.textContent = thirdAnswer['two'];
     answerFour.textContent = fourthAnswer['two'];
+
+    answerOne.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        thirdQuestion();
+    })
+
+    answerTwo.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        thirdQuestion();    
+    })
+
+    answerThree.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        thirdQuestion();
+    })
+
+    answerFour.addEventListener('click', Event => {
+        startGame.textContent = 'Correct!'
+        thirdQuestion();
+    })       
 };
 
 function thirdQuestion() {
@@ -100,6 +146,28 @@ function thirdQuestion() {
     answerThree.textContent = thirdAnswer['three'];
     answerFour.textContent = fourthAnswer['three'];
 
+    answerOne.addEventListener('click', Event => {
+        startGame.textContent = 'Correct!'
+        fourthQuestion();
+    })
+
+    answerTwo.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        fourthQuestion();    
+    })
+
+    answerThree.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        fourthQuestion();
+    })
+
+    answerFour.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+        fourthQuestion();
+    })   
 };
 
 function fourthQuestion() {
@@ -109,6 +177,25 @@ function fourthQuestion() {
     answerThree.textContent = thirdAnswer['four'];
     answerFour.textContent = fourthAnswer['four'];
 
+    answerOne.addEventListener('click', Event => {
+        startGame.textContent = 'Correct!'
+        // points added here
+    })
+
+    answerTwo.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+    })
+
+    answerThree.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+    })
+
+    answerFour.addEventListener('click', Event => {
+        startGame.textContent = 'WRONG!'
+        // secondsLeft - 10000;
+    })   
 };
 
 startGame.addEventListener('click', Event => {
