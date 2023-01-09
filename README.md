@@ -2,8 +2,6 @@
 
 ## Quiz game with coding questions
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
 - To create a fun quiz game that tests my knowledge of various coding terminology
 - I built this to put newly learned concepts such as dynamicaly changing html elements, intevals, and event listeners into practice.
 - This game allows a user to test their coding knowledge in a fun and competeitive way.
