@@ -23,8 +23,8 @@ var questionEl = {
 var firstAnswer = {
     one: 'Array',
     two: 'Strings and Numbers',
-    three: 'This one!',
-    four: 'Document Object Model',
+    three: 'Look Again',
+    four: 'A spicy sauce from the Dominican Republic',
 };
 
 var secondAnswer = {
@@ -35,25 +35,30 @@ var secondAnswer = {
 };
 
 var thirdAnswer = {
-    one: 'Boolean',
+    one: 'Function',
     two: 'booleans',
     three: 'Not this one.',
     four: "Dominic Toretto's nickname",
 };
 
 var fourthAnswer = {
-    one: 'Function',
+    one: 'Boolean',
     two: 'All of the Above',
-    three: 'Look again',
-    four: 'A spicy sauce from the Dominican Republic',
+    three: 'This One!',
+    four: 'Document Object Model',
 };
-
+var body = document.body;
+var h2El = document.createElement("h2");
+var inputEl = document.createElement("input");
+var infoEl = document.createElement("p");
 var timer = document.getElementById("timer");
 
 var secondsLeft = 60;
+var score = 1;
+var timeInterval = null;
 
 function countDown () {
-    var timeInterval = setInterval(function () {
+    timeInterval = setInterval(function () {
         secondsLeft--;
         timer.textContent = secondsLeft;
 
@@ -65,17 +70,33 @@ function countDown () {
     }, 1000);
 }
 
+function scoreBoard () {
+    body.appendChild(h2El);
+    body.appendChild(inputEl);
+    body.appendChild(infoEl);
+    score = secondsLeft * 5;
+    h2El.textContent = "Congradulations, you scored " + score + " points on the Coding Quiz";
+    infoEl.textContent = "Record your initials and save your score to the Leaderboard";
+
+}
+
 var startGame = document.getElementById("startGame");
 var question = document.getElementById("question");
 var answerOne = document.getElementById("answerOne");
 var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
 var answerFour = document.getElementById("answerFour");
+var deeNone = document.getElementsByClassName("d-none");
+
 
 
 function gameOver () {
     timer.textContent = "Game Over!";
 }
+
+
+
+
 function firstQuestion() {
     question.textContent = questionEl['one'];
     answerOne.textContent = firstAnswer['one'];
@@ -85,25 +106,24 @@ function firstQuestion() {
 
     answerOne.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
+        secondsLeft -= 10;
         secondQuestion();
     })
 
     answerTwo.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
+        secondsLeft -= 10;
         secondQuestion();    
     })
 
     answerThree.addEventListener('click', Event => {
-        startGame.textContent = 'Correct!'
-        // points added here
+        startGame.textContent = 'WRONG!'
+        secondsLeft -= 10;
         secondQuestion();
     })
 
     answerFour.addEventListener('click', Event => {
-        startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
+        startGame.textContent = 'Correct!'
         secondQuestion();
     })    
 };
@@ -117,19 +137,16 @@ function secondQuestion() {
 
     answerOne.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
         thirdQuestion();
     })
 
     answerTwo.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
         thirdQuestion();    
     })
 
     answerThree.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
         thirdQuestion();
     })
 
@@ -147,25 +164,22 @@ function thirdQuestion() {
     answerFour.textContent = fourthAnswer['three'];
 
     answerOne.addEventListener('click', Event => {
-        startGame.textContent = 'Correct!'
+        startGame.textContent = 'WRONG!'
         fourthQuestion();
     })
 
     answerTwo.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
-        fourthQuestion();    
+        fourthQuestion();  
     })
 
     answerThree.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
         fourthQuestion();
     })
 
     answerFour.addEventListener('click', Event => {
-        startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
+        startGame.textContent = 'Correct!'
         fourthQuestion();
     })   
 };
@@ -178,28 +192,43 @@ function fourthQuestion() {
     answerFour.textContent = fourthAnswer['four'];
 
     answerOne.addEventListener('click', Event => {
-        startGame.textContent = 'Correct!'
-        // points added here
-    })
+        startGame.textContent = 'WRONG!'
+        clearInterval(timeInterval);
+        gameOver();
+        scoreBoard();
+        })
 
     answerTwo.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
+        clearInterval(timeInterval);
+        gameOver();
+        scoreBoard();
     })
 
     answerThree.addEventListener('click', Event => {
         startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
+        clearInterval(timeInterval);
+        gameOver();
+        scoreBoard();
     })
 
     answerFour.addEventListener('click', Event => {
-        startGame.textContent = 'WRONG!'
-        // secondsLeft - 10000;
+        startGame.textContent = 'Correct!'
+        clearInterval(timeInterval);
+        gameOver();
+        scoreBoard();
     })   
 };
 
+
+function removeID() {
+    remove
+}
 startGame.addEventListener('click', Event => {
     countDown();
     firstQuestion();
-
+    for (var i = 0; i < deeNone.length; i++) {
+        var el = deeNone[i]
+        el.classList.remove("d-none")
+    }
 });

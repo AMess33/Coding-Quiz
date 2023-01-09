@@ -1,4 +1,21 @@
+h2 {
+    display: flex;
+    justify-content: center;
+}
 
+input {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    margin: 2px auto;
+    border: solid;
+}
 
-
-
+p {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 1px auto;
+    padding: 2px;
+    border: solid;
+}
