@@ -221,9 +221,9 @@ function fourthQuestion() {
 };
 
 
-function removeID() {
-    remove
-}
+// function removeID() {
+//     remove
+// }
 startGame.addEventListener('click', Event => {
     countDown();
     firstQuestion();
